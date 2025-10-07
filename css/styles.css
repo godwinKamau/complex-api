@@ -136,3 +136,7 @@ li {
     display: inline-flex;
     flex-wrap: wrap;
 }
+
+img {
+    margin-right: 5px;
+}
