@@ -65,6 +65,7 @@ function calculate() {
             .then(newData => {
                 console.table(newData.artists[0])
                 document.querySelector('img').src = newData.artists[0].strArtistThumb
+                document.querySelector('.words > h4').innerText = 'Related Artists'
                 
                 if(newData.artists[0].strBiographyEN.length > 250) {
                     const strArray = newData.artists[0].strBiographyEN.split(' ').slice(0,250).join(' ')
