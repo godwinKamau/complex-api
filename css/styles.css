@@ -1,0 +1,138 @@
+body {
+    display:flex;
+    flex-direction: column;
+    background-color: #000;
+    color:white;
+    font-family: 'Lexend','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.introContainer{
+    height:150px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: 'Poiret One',Arial, Helvetica, sans-serif;
+}
+
+.directions {
+    height:20%;
+    text-align: center;
+    font-family: 'Poiret One',Arial, Helvetica, sans-serif;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+.inputs {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+}
+
+.inputs > div {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+input {
+    height:3rem;
+    font-size: 1.5rem;
+    width:25%;
+    background-color: gray;
+}
+
+.title{
+    background-color: #121212;
+    width:35%;
+    padding-left: 30px;
+}
+/* got this button from this site: https://prismic.io/blog/css-button-animations */
+.btn {
+  position: relative;
+  padding: 1.5rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  min-width: 200px;
+  z-index: 1;
+  height:100px;
+  margin: auto;
+}
+
+.neon-pulse {
+  background: #000;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  overflow: visible;
+}
+
+.neon-pulse::before,
+.neon-pulse::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 2px solid #0ff;
+  border-radius: inherit;
+  animation: pulseOut 2s ease-out infinite;
+  opacity: 0;
+}
+
+.neon-pulse::after {
+  animation-delay: 1s;
+}
+
+@keyframes pulseOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.recContainer{
+    display: flex;
+    height:700px;
+    background: linear-gradient(132deg, #000000,#007300, #00007b,#7e003f,#7a0000,#807e7e);
+    background-size: 400% 400%;
+    animation: BackgroundGradient 15s ease infinite;
+    justify-content: space-around;
+}
+
+@keyframes BackgroundGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+a{
+    color:black
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+li {
+    padding:4px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}

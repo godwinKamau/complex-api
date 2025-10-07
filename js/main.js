@@ -49,12 +49,29 @@ function calculate() {
         document.querySelector('h2').innerText = topArtist
         const taString = topArtist.split(' ').join('+')
         console.log(taString)
+        document.querySelector('a').href= data.similar.results[0].yUrl
+        document.querySelector('a').innerText = data.similar.results[0].yUrl
+        const list = document.querySelector('ul')
+        for (let i = 1; i < 15;i++){
+            let listItem = document.createElement('li')
+            let linkClick = document.createElement('a')
+            linkClick.href = data.similar.results[i].yUrl
+            linkClick.innerText = data.similar.results[i].name
+            list.appendChild(listItem)
+            listItem.appendChild(linkClick)
+        }
         fetch(`https://www.theaudiodb.com/api/v1/json/123/search.php?s=${taString}`)
             .then(res => res.json())
             .then(newData => {
                 console.table(newData.artists[0])
                 document.querySelector('img').src = newData.artists[0].strArtistThumb
-                document.querySelector('h3').innerText = newData.artists[0].strBiographyEN
+                
+                if(newData.artists[0].strBiographyEN.length > 250) {
+                    const strArray = newData.artists[0].strBiographyEN.split(' ').slice(0,250).join(' ')
+                    document.querySelector('h3').innerText = strArray + ' ...'
+                } else {
+                    document.querySelector('h3').innerText = newData.artists[0].strBiographyEN
+                }
             })
             .catch(err => console.log(err))
 
