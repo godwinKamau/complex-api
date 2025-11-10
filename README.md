@@ -1,22 +1,27 @@
-# 📊 Project: Complex API 
+# Music Calculator
+<hr>
 
-### Goal: Use data returned from one api to make a request to another api and display the data returned
+_This is an app that sends a request to the Tastedive and AudioDB APIs to calculate a new artist for you to enjoy based off of magical musical calculations._
 
-### How to submit your code for review:
+<hr>
 
-- Fork and clone this repo
-- Create a new branch called answer
-- Checkout answer branch
-- Push to your fork
-- Issue a pull request
-- Your pull request description should contain the following:
-  - (1 to 5 no 3) I completed the challenge
-  - (1 to 5 no 3) I feel good about my code
-  - Anything specific on which you want feedback!
+<a style="text-align:center" href="https://godwinkamau.github.io/complex-api/">Here is the rendered project</a>
 
-Example:
-```
-I completed the challenge: 5
-I feel good about my code: 4
-I'm not sure if my constructors are setup cleanly...
-```
+<br>
+
+<img src="./Screenshot 2025-11-09 at 9.23.46 PM.png" alt="preview of the app">
+
+
+## How It's Made:
+_Tech used: HTML, CSS, JavaScript, Restful APIs_
+
+I used fetch requests to grab an artist from a music database. The result(s) of your search(es) are then passed through TasteDive to find artists that cross-correlate with your artists. The top result is displayed while tertiary results are given as links for you to follow up on.
+
+
+## Lessons Learned:
+API databases are really fun! The extent that people go to to make information accessible is amazing. On the tech side, I learned about properly working with asynchronous behavior using ```.then()``` statements.
+
+### More Projects:
+<a href="https://github.com/godwinKamau/wu-tang-generator-bootcamp">Wu-Tang Name Generator</a>
+
+<a href="https://github.com/godwinKamau/chatroom">A really slick chatroom</a>
